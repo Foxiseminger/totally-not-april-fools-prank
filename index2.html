@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NYEH HEH HEH (only real ones get that joke)</title>
+    <style>
+        /* Define the custom font */
+        @font-face {
+            font-family: "Determination Mono";
+            src: url("DeterminationMonoWebRegular-Z5oq (1).ttf") format("truetype");
+        }
+        /* Apply the custom font to the body */
+        body {
+            font-family: "Determination Mono", sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+            text-align: center;
+            margin: 0;
+            background-color: black;
+            color: white;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+        }
+        .big-boi {
+            font-size: 8ch
+        }
+        .smoll-big-boi {
+            font-size: 6ch
+        }
+    </style>
+    <audio autoplay loop>
+        <source src="mus_dance_of_dog.ogg" type="audio/ogg">
+    </audio>
+</head>
+<body>
+    <img src="dog-happy.gif" alt="Happy Dog">
+    <h1 id="greeting", class="big-boi"></h1>
+    <h1 class="smoll-big-boi">By: Fox :3</h1>
+
+    <script>
+        // Function to get the 'name' parameter from the URL
+        function getQueryParam(param) {
+            let urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(param);
+        }
+
+        // Get the name from the URL
+        let name = getQueryParam("name");
+
+        // Display the name if it exists
+        if (name) {
+            document.getElementById("greeting").innerText = "Happy April Fools, " + decodeURIComponent(name) + "!";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Honesty Reminder</title>
+</head>
+<body>
+    <h1 id="greeting"></h1></h1>
+    <a href="index.html">answer questions again</a>
+    <script>
+        // Function to get the 'name' parameter from the URL
+        function getQueryParam(param) {
+            let urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(param);
+        }
+
+        // Get the name from the URL
+        let name = getQueryParam("name");
+
+        // Display the name if it exists
+        if (name) {
+            document.getElementById("greeting").innerText = "Well, try to answer honestly next time, okay " + decodeURIComponent(name) +"?";
+        }
+
+    </script>
+</body>
+</html>
